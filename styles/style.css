@@ -2,4 +2,125 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --green: rgb(100, 153, 20);
+  --green-hover: #325509;
+  --bk-gray: rgb(233, 233, 233);
+  --bk-milk: rgb(255, 254, 240);
+  --border-milk: rgb(214, 214, 214);
+}
+
+.nav-container {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  font-family: "Quicksand", sans-serif;
+  border-bottom: 1px solid black;
+}
+
+.nav-brand {
+  width: 20vw;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+}
+.nav-menu-container {
+  display: flex;
+}
+
+.nav-menu-container li {
+  padding: 1rem;
+  list-style: none;
+}
+
+.nav-menu-container li a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+.span-brand {
+  color: var(--green);
+}
+
+/*  MAIN CONTAINER */
+
+#main-container {
+  display: flex;
+  height: calc(100vh - 17vh);
+}
+
+#aside-container {
+  position: relative;
+  padding: 1em;
+  max-width: 20vw;
+  min-width: 20vw;
+  border-right: 1px solid gray;
+}
+
+#aside-container h1 {
+  padding: 10px;
+}
+
+#projects-list {
+  padding: 20px 10px;
+}
+
+#projects-list li {
+  list-style: none;
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+#overview-container {
+  padding: 1em;
+  width: 100%;
+}
+
+footer {
+  background-color: black;
+  height: 7vh;
+}
+.btn-primary {
+  width: 8rem;
+  height: 3rem;
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--green);
+  border: 1px solid var(--bk-gray);
+  border-radius: 5px;
+  color: azure;
+  font-size: 16px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: block;
+  transition: 0.3s;
+  margin: auto;
+}
+
+.btn-primary:hover {
+  background-color: var(--green-hover);
+  border: 1px solid #809c5f;
+  transition: 0.3s;
+}
+
+#add-task {
+  position: absolute;
+  bottom: 50px;
+  left: 25%;
+  /* width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 20px; */
+}
+
+#add-task:hover {
+  background-color: var(--green-hover);
+  border: 1px solid #809c5f;
+  transition: 0.3s;
 }
