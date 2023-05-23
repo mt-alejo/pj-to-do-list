@@ -4,6 +4,7 @@ const createTask = (id, title, description, date) => {
 
 const Imbox = [];
 const taskContainer = document.querySelector("#tasks-container");
+const formContainer = document.querySelector("#form-container");
 
 const Tasker = (() => {
   const add = (id, title, description, date) => {
@@ -38,3 +39,18 @@ Tasker.render();
 
 console.log(Imbox);
 console.log(taskContainer);
+
+const btnOpenForm = document
+  .querySelector("#open-form-btn")
+  .addEventListener("click", () => {
+    document.querySelector("section").style.filter = "blur(5px)";
+    formContainer.style.display = "block";
+  });
+
+const btnCloseForm = document
+  .querySelector("#close-form-btn")
+  .addEventListener("click", () => {
+    document.querySelector("section").style.filter = "blur(0px)";
+    formContainer.style.display = "none";
+    formContainer.reset();
+  });
